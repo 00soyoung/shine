@@ -9,9 +9,9 @@
 <body>
     <div class="pc">
         <header>
-            <h1><a href="#"></a></h1>
             <div class="gnb">
-                <ul class="menu">
+                <h1><a href="#"><img src="image/logo.png" alt="로고이미지"></a></h1>
+                <ul>
                     <li class="menuGroup">
                         <ul>
                             <li><a href="#">제품</a></li>
@@ -21,21 +21,42 @@
                     </li>
                     <li class="iconGroup">
                         <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#"><img src="image/icon_01.png" alt="마이페이지"></a></li>
+                            <li><a href="#"><img src="image/icon_02.png" alt="찜목록"></a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </header>
+        </header><!--header종료-->
 
         <div class="visual">
-            <ul>
-              <li><a href="#"><img src="" alt="메인이미지01"></a></li>
-              <li><a href="#"><img src="" alt="메인이미지02"></a></li>
-              <li><a href="#"><img src="" alt="메인이미지03"></a></li>
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <ul class="slideList">
+              <li class="slideItem">
+                  <div>
+                      <label for="slide02" class="right"></label>
+                      <!--<label for="slide03" class="left"></label>-->
+                      <a href="#"><img src="image/visual_01.png" alt="메인이미지01"></a>
+                  </div>
+              </li>
+                <li class="slideItem">
+                    <div>
+                        <label for="slide03" class="right"></label>
+                        <label for="slide01" class="left"></label>
+                        <a href="#"><img src="image/visual_02.png" alt="메인이미지02"></a>
+                    </div>
+                </li>
+                <li class="slideItem">
+                    <div>
+<!--                        <label for="slide01" class="right"></label>-->
+                        <label for="slide02" class="left"></label>
+                        <a href="#"><img src="image/visual_03.png" alt="메인이미지03"></a>
+                    </div>
+                </li>
             </ul>
-        </div>
+        </div><!--visual종료-->
 
         <div class="contents">
             <div class="con_01">
@@ -147,6 +168,7 @@
             </ul>
         </footer>
     </div><!--pc종료-->
+
     <div class="mobile"></div>
 </body>
 </html>

@@ -1,4 +1,5 @@
-/**
+@charset "UTF-8";
+/*--import--*/ /**
  * Reset Mixing
  * ================================================== */
 /**
@@ -19,6 +20,7 @@
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
+@import url("https://fonts.googleapis.com/css2? family= Noto+Sans+KR:wght@400;500;700 & display=swap");
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -582,13 +584,165 @@ template {
   display: none;
 }
 
+/*--초기설정--*/
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/*---변수---*/
 .pc {
-  border: 1px solid blue;
+  border: 0px solid blue;
   width: 100%;
   height: auto;
+  font-family: "Noto Sans KR", 산세리프;
+  letter-spacing: -0.9px;
+  /*=== Header ===*/
+  /*header_종료*/
+  /*=== visual ===*/
+  /*visual_종료*/
+  /*=== contents ===*/
+  /*contents_종료*/
+  /*=== footer ===*/
+}
+.pc h1 {
+  border: 0px solid red;
 }
 .pc header {
+  background-color: #fff;
+  border-bottom: 1px solid #E5E5E5;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+}
+.pc header ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pc header .gnb {
+  width: 80%;
+  border: 0px solid green;
+  display: flex;
+  align-items: center;
+}
+.pc header .gnb .menuGroup {
+  border: 0px solid red;
+  font-weight: 700;
+}
+.pc header .gnb .menuGroup ul {
+  display: flex;
+  width: 350px;
+  justify-content: space-evenly;
+  border: 0px solid black;
+}
+.pc header .gnb .menuGroup ul li > a {
+  color: #ccc;
+}
+.pc header .gnb .menuGroup ul li > a:hover {
+  color: #333;
+  transition: all 0.5s;
+}
+.pc header .gnb .iconGroup {
+  border: 0px solid blanchedalmond;
+}
+.pc header .gnb .iconGroup ul {
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pc [name=slide] {
+  display: none;
+}
+.pc .visual {
+  /*max-width:1000px;*/
+  width: 100%;
+  margin: 0 auto;
+}
+.pc .visual img {
+  max-width: 100%;
+}
+.pc .visual .slideList {
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+.pc .visual .slideItem {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  transition: all 0.5s;
+  /*transition: all 35s;*/
+}
+.pc .visual .slideItem label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pc .visual label.left {
+  left: 180px;
+  background-image: url("/image/l_btn.png");
+  background-position: center center;
+  /*background-size:50%;*/
+  background-repeat: no-repeat;
+}
+.pc .visual label.right {
+  right: 180px;
+  background-image: url("/image/r_btn.png");
+  background-position: center center;
+  /*background-size:50%;*/
+  background-repeat: no-repeat;
+}
+.pc .visual [id=slide01]:checked ~ .slideList .slideItem {
+  transform: translateX(0);
+}
+.pc .visual [id=slide02]:checked ~ .slideList .slideItem {
+  transform: translateX(-100%);
+}
+.pc .visual [id=slide03]:checked ~ .slideList .slideItem {
+  transform: translateX(-200%);
+}
+.pc .contents {
+  width: 80%;
+  border: 1px solid green;
+  margin: 0 auto;
+  text-align: center;
+}
+.pc .contents .con_01 {
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
 }
+.pc .contents .con_02 {
+  height: 150px;
+  border: 1px solid #333333;
+}
+.pc .contents .con_03 {
+  border: 1px solid #777;
+}
+.pc .contents .con_04 {
+  border: 1px solid #999;
+}
+.pc .contents .con_05 {
+  border: 1px solid #222;
+}
+.pc footer {
+  background-color: #414141;
+}
+
+/*-----pc종료-------*/
 
 /*# sourceMappingURL=Style.css.map */
