@@ -8,8 +8,13 @@ a{text-decoration: none; color:#333;}
 
 /*---변수---*/
 $basics-font:'Noto Sans KR', 산세리프;
+$font-size-01:20px;
+$font-size-02:15px;
+$font-weight-01:700;
+$font-weight-02:400;
 
-
+$title-padding:20px;
+$padding-b-20:20px;
 
 .pc{
   border:0px solid blue;
@@ -125,14 +130,115 @@ $basics-font:'Noto Sans KR', 산세리프;
     .con_01{
       display: flex;
       flex-direction: column;
-      border:1px solid red;
+      border:0px solid red;
+      .tilte_01{
+        border:0px solid red;
+        font-size:$font-size-01;
+        font-weight:$font-weight-01;
+        padding:$title-padding;
+      }
+      input[type="radio"]{
+        display:none;
+      }
+      .conbox{
+/*        width:300px;
+        height:300px;*/
+        display:none;
+        ul{
+          border: 0px solid blue;
+          display: flex;
+          justify-content: space-evenly;
+        }
+      }
+      .tabBtn{
+        padding:10px;
+        text-align: center;
+      }
+      label[for*="tab"]{
+        display:inline-block;
+        padding:10px;
+        /*background:#ccc;*/
+        cursor: pointer;
+        margin:5px;
+        a{color:#ccc;}
+      }
+      input[id="tab01"]:checked ~ .con1{
+        display:block;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding-top: 40px;
+        img{
+          width: 95%;
+          &:hover{
+            opacity: 0.6;
+            transition: all 0.3s;
+          }
+        }
+      }
+      input[id="tab02"]:checked ~ .con2{
+        display:block;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding-top: 40px;
+        ul>li{
+          width:272px;
+          height:260px;
+          background:#cccccc;
+          border-radius: 22px;
+        }
+      }
+      input[id="tab03"]:checked ~ .con3{
+        display:block;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding-top: 40px;
+        ul>li{
+          width:272px;
+          height:260px;
+          background:#E5E5E5;
+          border-radius: 22px;
+        }
+      }
+      input[id="tab01"]:checked ~ .tabBtn > label[for="tab01"] > a{
+        border-bottom: 3px solid #112046;
+        color:#333;
+        padding-bottom: 5px;
+      }
+      input[id="tab02"]:checked ~ .tabBtn > label[for="tab02"] > a{
+        border-bottom: 3px solid #112046;
+        color:#333;
+        padding-bottom: 5px;
+      }
+      input[id="tab03"]:checked ~ .tabBtn > label[for="tab03"] > a{
+        border-bottom: 3px solid #112046;
+        color:#333;
+        padding-bottom: 5px;
+      }
+      .pB{padding-bottom:$padding-b-20;}
     }
     .con_02{
-      height:150px;
-      border: 1px solid #333333;
+      height:300px;
+      border: 0px solid #333333;
+      padding-top:90px;
+      img{
+        width:75%;
+      }
     }
     .con_03{
       border:1px solid #777;
+      .tilte_02{
+        border:0px solid red;
+        font-size:$font-size-01;
+        font-weight:$font-weight-01;
+        padding:$title-padding;
+        p:nth-child(2){
+          border:0px solid red;
+          font-size:$font-size-02;
+          font-weight:$font-weight-02;
+          color:#AFAFAF;
+          padding-top: 5px;
+        }
+      }
     }
     .con_04{
       border:1px solid #999;
